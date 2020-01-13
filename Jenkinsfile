@@ -83,7 +83,7 @@ spec:
                 sh 'echo "Functional Tests"'
             }
         }
-        if (env.BRANCH_NAME == "master") {
+        if (env.TAG_NAME != "") {
         stage('Deploy') {
             container('alpine') {
                 sh 'echo "Deploy"'
