@@ -30,6 +30,7 @@ spec:
     node(label) {
         stage('Checkout Workspace') {
             container('alpine') {
+                echo sh(returnStdout: true, script: 'env')
                 sh 'echo "Checkout Workspace"'
             }
         }
